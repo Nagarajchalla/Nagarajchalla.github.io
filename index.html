@@ -1,161 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nagaraj Challa | DevOps & Security Engineer</title>
+
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: #f5f7fa;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background-color: #f4f6f9;
       color: #333;
       line-height: 1.6;
     }
+
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 20px;
+      padding: 30px;
       background: #ffffff;
     }
-    h1, h2, h3 {
-      color: #0a2540;
+
+    header {
+      border-bottom: 3px solid #0a66c2;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
     }
+
     h1 {
-      margin-bottom: 5px;
+      margin: 0;
+      color: #0a2540;
+      font-size: 36px;
     }
-    .subtitle {
+
+    .role {
       font-size: 18px;
       color: #555;
-      margin-bottom: 10px;
+      margin-top: 5px;
     }
+
     .contact {
+      margin-top: 10px;
       font-size: 14px;
-      margin-bottom: 20px;
     }
+
     .contact a {
       color: #0a66c2;
       text-decoration: none;
     }
+
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
+
+    section h2 {
+      color: #0a2540;
+      border-left: 5px solid #0a66c2;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
     ul {
-      margin-left: 20px;
+      padding-left: 20px;
     }
-    .skills-grid {
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
     }
+
     .skill {
       background: #eef3f8;
-      padding: 8px 12px;
-      border-radius: 5px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .company {
+      font-weight: bold;
+      color: #0a66c2;
+    }
+
+    .date {
+      font-style: italic;
+      color: #666;
       font-size: 14px;
     }
-    .footer {
+
+    footer {
       text-align: center;
       font-size: 13px;
       color: #777;
-      margin-top: 40px;
+      margin-top: 50px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
+<div class="container">
 
+  <!-- HEADER -->
+  <header>
     <h1>Nagaraj Challa</h1>
-    <div class="subtitle">DevOps & Security Engineer (2.6 Years Experience)</div>
+    <div class="role">DevOps & Security Engineer | AWS | Azure | Kubernetes | CI/CD</div>
 
     <div class="contact">
-      📧 Email: <a href="mailto:nagarajreddy2219@gmail.com">nagarajreddy2219@gmail.com</a><br>
-      📞 Phone: +91 8125377673<br>
-      🔗 LinkedIn: <a href="https://linkedin.com/in/challa-nagaraju" target="_blank">linkedin.com/in/challa-nagaraju</a>
+      📧 <a href="mailto:nagarajreddy2219@gmail.com">nagarajreddy2219@gmail.com</a> |
+      📞 +91 9980897890 |
+      🔗 <a href="https://linkedin.com/in/challa-nagaraju" target="_blank">LinkedIn</a>
     </div>
+  </header>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am a DevOps & Security Engineer with 2.6 years of hands-on experience in building, securing,
-        and managing cloud-native infrastructure on AWS and Azure. I specialize in CI/CD automation,
-        Kubernetes deployments, cloud security, monitoring, and cost optimization for production systems.
-      </p>
-    </section>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      DevOps & Security Engineer with 2.6 years of hands-on experience in designing,
+      securing, and managing cloud-native infrastructure on AWS and Azure.
+      Strong expertise in CI/CD automation, Kubernetes, cloud security,
+      monitoring, and cost optimization for production environments.
+    </p>
+  </section>
 
-    <section>
-      <h2>Professional Experience</h2>
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Professional Experience</h2>
 
-      <h3>Omnibound, U.S.A — AWS DevOps & Security Engineer</h3>
-      <p><em>April 2025 – Present</em></p>
-      <ul>
-        <li>Designed and managed end-to-end CI/CD pipelines using Jenkins, Git, Docker, and ArgoCD for automated deployments on AWS EKS.</li>
-        <li>Implemented secure delivery using Cloudflare CDN and WAF rules.</li>
-        <li>Implemented SOC 2 compliance controls by integrating GitGuardian, ScoutSuite, OWASP ZAP, Sentry, SonarQube, and AWS security services.</li>
-        <li>Integrated Aurora PostgreSQL and Pinecone vector database for AI semantic search workloads.</li>
-        <li>Led engineers in website development and cloud infrastructure management using AWS services.</li>
-        <li>Improved security and observability using IAM best practices, VPC design, CloudWatch, Prometheus, and Grafana.</li>
-      </ul>
+    <p class="company">Omnibound (USA) — AWS DevOps & Security Engineer</p>
+    <p class="date">April 2025 – Present</p>
+    <ul>
+      <li>Designed and maintained end-to-end CI/CD pipelines using Jenkins, Git, Docker, and ArgoCD.</li>
+      <li>Deployed and managed workloads on AWS EKS with secure delivery via Cloudflare CDN and WAF.</li>
+      <li>Implemented SOC 2 compliance controls using GitGuardian, ScoutSuite, OWASP ZAP, Sentry, and SonarQube.</li>
+      <li>Integrated Aurora PostgreSQL and Pinecone vector database for AI-based search workloads.</li>
+      <li>Improved observability and security using IAM best practices, CloudWatch, Prometheus, and Grafana.</li>
+    </ul>
 
-      <h3>Omnineura AI Technologies, Bangalore — Azure DevOps Engineer</h3>
-      <p><em>June 2023 – January 2025</em></p>
-      <ul>
-        <li>Built and optimized CI/CD pipelines for around 10 microservices using Jenkins, ACR, and Git.</li>
-        <li>Containerized applications using Docker for consistent deployments.</li>
-        <li>Deployed and managed production workloads on Azure Kubernetes Service (AKS).</li>
-      </ul>
-    </section>
+    <p class="company">Omnineura AI Technologies — Azure DevOps Engineer</p>
+    <p class="date">June 2023 – January 2025</p>
+    <ul>
+      <li>Built and optimized CI/CD pipelines for ~10 microservices.</li>
+      <li>Containerized applications using Docker for consistency and portability.</li>
+      <li>Deployed and managed production workloads on Azure Kubernetes Service (AKS).</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">AWS</div>
-        <div class="skill">Azure</div>
-        <div class="skill">Kubernetes (EKS, AKS)</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Jenkins</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">Terraform</div>
-        <div class="skill">Cloudflare</div>
-        <div class="skill">Linux</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">Aurora PostgreSQL</div>
-        <div class="skill">SOC 2 Compliance</div>
-        <div class="skill">Monitoring & Observability</div>
-        <div class="skill">Cost Optimization</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p>
-        <strong>B.Tech – Electrical & Electronics Engineering</strong><br>
-        Kakatiya University, Warangal (2019 – 2023)<br>
-        Percentage: 71.6%
-      </p>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>AWS Cloud Foundations Certification</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Awards</h2>
-      <ul>
-        <li>Star Performer Award – Omnibound</li>
-        <li>Omnineura Gem Award</li>
-      </ul>
-    </section>
-
-    <div class="footer">
-      © 2025 Nagaraj Challa | DevOps & Security Engineer
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">AWS (EC2, EKS, IAM, RDS, CloudWatch)</div>
+      <div class="skill">Azure (AKS, ACR)</div>
+      <div class="skill">Kubernetes (EKS, AKS)</div>
+      <div class="skill">Docker</div>
+      <div class="skill">Jenkins</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Terraform</div>
+      <div class="skill">Cloudflare (CDN & WAF)</div>
+      <div class="skill">Linux</div>
+      <div class="skill">MySQL & Aurora PostgreSQL</div>
+      <div class="skill">SOC 2 Compliance</div>
+      <div class="skill">Monitoring & Observability</div>
     </div>
+  </section>
 
-  </div>
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+    <p>
+      <strong>B.Tech – Electrical & Electronics Engineering</strong><br/>
+      Kakatiya University, Warangal (2019 – 2023)<br/>
+      Percentage: 71.6%
+    </p>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Cloud Foundations Certification</li>
+    </ul>
+  </section>
+
+  <!-- AWARDS -->
+  <section>
+    <h2>Awards</h2>
+    <ul>
+      <li>Star Performer Award – Omnibound</li>
+      <li>Omnineura Gem Award</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Nagaraj Challa | DevOps & Security Engineer
+  </footer>
+
+</div>
 
 </body>
 </html>
