@@ -9,92 +9,114 @@
     body {
       margin: 0;
       font-family: Inter, system-ui, Arial, sans-serif;
-      background: radial-gradient(circle at top left, #111827, #020617);
+      background: radial-gradient(circle at top left, #0f172a, #020617);
       color: #e5e7eb;
     }
 
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 90px 30px;
+      padding: 100px 30px;
     }
 
     /* HERO */
     header {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
-      gap: 90px;
+      gap: 100px;
       align-items: center;
     }
 
     .hello {
-      font-size: 18px;
       color: #9ca3af;
-      margin-bottom: 10px;
+      font-size: 18px;
+      margin-bottom: 12px;
     }
 
     h1 {
-      font-size: 58px;
+      font-size: 60px;
       margin: 0 0 14px;
     }
 
     .passionate {
       font-size: 20px;
       color: #9ca3af;
-      margin-bottom: 4px;
     }
 
     .role {
       font-size: 28px;
       color: #f97316;
       font-weight: 600;
-      margin-bottom: 18px;
+      margin: 8px 0 18px;
     }
 
     .tagline {
-      font-size: 18px;
       color: #9ca3af;
-      margin-bottom: 42px;
+      font-size: 18px;
+      margin-bottom: 36px;
       line-height: 1.6;
     }
 
-    /* BUTTONS */
-    .buttons {
+    /* PRIMARY BUTTONS */
+    .main-buttons {
       display: flex;
+      gap: 18px;
+      margin-bottom: 26px;
       flex-wrap: wrap;
-      gap: 14px;
     }
 
-    .buttons a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-size: 15px;
+    .btn {
+      padding: 16px 34px;
+      border-radius: 14px;
       font-weight: 600;
+      font-size: 15px;
       text-decoration: none;
-      color: #e5e7eb;
-      border: 1px solid #334155;
-      background: rgba(255,255,255,0.02);
+      border: 2px solid transparent;
       transition: all 0.25s ease;
     }
 
-    .buttons a.primary {
+    .btn-primary {
+      background: #f97316;
+      color: #020617;
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.03);
+      color: #e5e7eb;
+      border: 2px solid #1e293b;
+    }
+
+    /* THICK HOVER (LIKE LLOYD) */
+    .btn:hover {
       background: #f97316;
       color: #020617;
       border-color: #f97316;
     }
 
-    /* HOVER EFFECT LIKE LLOYD */
-    .buttons a:hover {
-      color: #f97316;
-      border-color: #f97316;
-      background: rgba(249,115,22,0.08);
+    /* ICON BUTTONS */
+    .icon-buttons {
+      display: flex;
+      gap: 14px;
     }
 
-    .buttons a.primary:hover {
-      background: #fb923c;
+    .icon-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.03);
+      border: 2px solid #1e293b;
+      color: #e5e7eb;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .icon-btn:hover {
+      background: #f97316;
+      border-color: #f97316;
       color: #020617;
     }
 
@@ -105,8 +127,8 @@
     }
 
     .profile-ring {
-      width: 330px;
-      height: 330px;
+      width: 340px;
+      height: 340px;
       border-radius: 50%;
       padding: 6px;
       background: linear-gradient(135deg, #f97316, #fb923c);
@@ -114,7 +136,7 @@
     }
 
     .profile-ring:hover {
-      box-shadow: 0 0 32px rgba(249,115,22,0.4);
+      box-shadow: 0 0 35px rgba(249,115,22,0.45);
     }
 
     .profile-ring img {
@@ -132,7 +154,8 @@
         text-align: center;
       }
 
-      .buttons {
+      .main-buttons,
+      .icon-buttons {
         justify-content: center;
       }
     }
@@ -143,6 +166,7 @@
 <div class="container">
 
   <header>
+
     <!-- LEFT -->
     <div>
       <div class="hello">👋 Hello, I'm</div>
@@ -157,12 +181,17 @@
         Building scalable & secure cloud infrastructure 🚀
       </div>
 
-      <div class="buttons">
-        <a class="primary" href="resume.pdf">Download Resume</a>
-        <a href="projects.html">View Projects</a>
-        <a href="https://linkedin.com/in/challa-nagaraju" target="_blank">LinkedIn</a>
-        <a href="mailto:nagarajreddy2219@gmail.com">Email</a>
-        <a href="tel:+918125377673">Call</a>
+      <!-- MAIN BUTTONS -->
+      <div class="main-buttons">
+        <a class="btn btn-primary" href="resume.pdf">Download Resume</a>
+        <a class="btn btn-outline" href="projects.html">View Projects</a>
+      </div>
+
+      <!-- ICON BUTTONS (LIKE LLOYD) -->
+      <div class="icon-buttons">
+        <a class="icon-btn" href="https://linkedin.com/in/challa-nagaraju" target="_blank">🔗</a>
+        <a class="icon-btn" href="mailto:nagarajreddy2219@gmail.com">✉️</a>
+        <a class="icon-btn" href="tel:+918125377673">📞</a>
       </div>
     </div>
 
@@ -172,6 +201,7 @@
         <img src="profile.jpg" alt="Nagaraj Challa">
       </div>
     </div>
+
   </header>
 
 </div>
