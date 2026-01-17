@@ -31,15 +31,11 @@
     body {
       background: radial-gradient(circle at top, #0b1538, #020714);
       color: var(--text-light);
-      overflow-x: hidden;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
-    /* ================= HEADER ================= */
+    /* ================= MENU BUTTON ================= */
     header {
       position: fixed;
       top: 20px;
@@ -57,7 +53,6 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: 0.3s;
     }
 
     .menu-btn:hover {
@@ -78,53 +73,106 @@
       z-index: 999;
     }
 
-    .side-menu.active {
-      right: 0;
-    }
+    .side-menu.active { right: 0; }
 
     .side-menu h3 {
       color: var(--accent);
       margin-bottom: 30px;
-      font-size: 18px;
     }
 
     .side-menu a {
       display: block;
       margin: 18px 0;
       font-size: 16px;
-      color: var(--text-light);
-      transition: 0.3s;
     }
 
-    .side-menu a:hover {
-      color: var(--accent);
-    }
+    .side-menu a:hover { color: var(--accent); }
 
     .close-btn {
       position: absolute;
       top: 20px;
       right: 20px;
+      color: var(--accent);
       cursor: pointer;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      padding: 110px 10%;
+    }
+
+    /* ================= HOME ================= */
+    #home {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 14px;
+      border: 1px solid var(--border-soft);
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .btn.secondary:hover {
+      border-color: var(--accent);
       color: var(--accent);
     }
 
-    /* ================= SECTION ================= */
-    section {
-      padding: 100px 10%;
+    .profile {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 6px solid var(--accent);
+      background: url("profile.jpg") center/cover no-repeat;
+      margin-left: auto;
     }
 
     /* ================= CONTACT ================= */
-    .contact-title {
+    .title {
       text-align: center;
       font-size: 42px;
       margin-bottom: 10px;
     }
 
-    .contact-subtitle {
+    .subtitle {
       text-align: center;
       color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 60px;
+      margin-bottom: 60px;
     }
 
     .contact-wrapper {
@@ -133,81 +181,39 @@
       gap: 40px;
     }
 
-    .contact-box {
+    .box {
       background: var(--bg-card);
-      border-radius: 20px;
       padding: 35px;
+      border-radius: 20px;
       border: 1px solid var(--border-soft);
     }
 
-    .contact-box h3 {
+    .box h3 {
       color: var(--accent);
       margin-bottom: 15px;
-      font-size: 22px;
     }
 
-    .contact-box p {
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .status-list {
-      margin-top: 20px;
-    }
-
-    .status-list li {
-      margin-bottom: 10px;
-      list-style: none;
-    }
-
-    .status-list li::before {
-      content: "●";
-      color: #2ecc71;
-      margin-right: 10px;
-    }
-
-    /* ================= INFO LIST ================= */
-    .info-item {
+    .info {
       display: flex;
       align-items: center;
       gap: 15px;
       padding: 15px;
       border-radius: 14px;
-      margin-bottom: 15px;
-      transition: 0.3s;
       border: 1px solid var(--border-soft);
+      margin-bottom: 15px;
     }
 
-    .info-item:hover {
-      border-color: var(--accent);
-      background: rgba(255,138,31,0.05);
-    }
-
-    .info-item i {
-      font-size: 20px;
+    .info i {
       color: var(--accent);
-      width: 30px;
-      text-align: center;
+      font-size: 18px;
     }
 
-    .info-item span {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    .info-item strong {
-      display: block;
-      font-size: 15px;
-      color: var(--text-light);
-    }
-
-    /* ================= RESPONSIVE ================= */
     @media(max-width: 900px) {
-      .contact-wrapper {
+      #home, .contact-wrapper {
         grid-template-columns: 1fr;
       }
-      section {
-        padding: 80px 6%;
+      .profile {
+        margin: 40px auto 0;
       }
     }
   </style>
@@ -215,86 +221,77 @@
 
 <body>
 
-<!-- MENU BUTTON -->
 <header>
   <div class="menu-btn" onclick="toggleMenu()">
     <i class="fas fa-bars"></i>
   </div>
 </header>
 
-<!-- SIDE MENU -->
 <div class="side-menu" id="menu">
   <i class="fas fa-times close-btn" onclick="toggleMenu()"></i>
   <h3>Menu</h3>
   <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </div>
 
-<!-- CONTACT SECTION -->
+<!-- HOME -->
+<section id="home">
+  <div class="hero">
+    <p>👋 Hello, I’m</p>
+    <h1>Nagaraj Challa</h1>
+    <h2>DevOps & Security Engineer ⚙️</h2>
+    <p>
+      AWS • Azure • Kubernetes • CI/CD • Cloud Security  
+      <br/>Building scalable, secure, and production-ready cloud infrastructure.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn primary" href="#contact">Contact Me</a>
+      <a class="btn secondary" href="#contact">View Projects</a>
+    </div>
+  </div>
+
+  <div class="profile"></div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-  <h1 class="contact-title">Get In Touch</h1>
-  <p class="contact-subtitle">
-    I’m always open to discussing new opportunities, DevOps challenges,
-    cloud security projects, or long-term collaborations. Feel free to reach out.
+  <h1 class="title">Get In Touch</h1>
+  <p class="subtitle">
+    Open to DevOps roles, cloud security projects, and long-term collaborations.
   </p>
 
   <div class="contact-wrapper">
-
-    <!-- LEFT -->
-    <div class="contact-box">
+    <div class="box">
       <h3>Let’s Collaborate</h3>
       <p>
-        Whether you’re a company looking for a reliable DevOps & Security Engineer,
-        a startup needing scalable cloud infrastructure, or a team seeking automation
-        and compliance support — I’m happy to connect.
+        Whether you're a company, startup, or team seeking automation,
+        scalability, or security — I’d be happy to connect.
       </p>
-
-      <ul class="status-list">
-        <li>Available for remote work</li>
-        <li>Open to freelance & contract roles</li>
-        <li>Interested in long-term collaborations</li>
-      </ul>
     </div>
 
-    <!-- RIGHT -->
-    <div class="contact-box">
+    <div class="box">
       <h3>Contact Information</h3>
 
-      <a class="info-item" href="mailto:nagarajreddy2219@gmail.com">
+      <div class="info">
         <i class="fas fa-envelope"></i>
-        <div>
-          <strong>Email</strong>
-          <span>nagarajreddy2219@gmail.com</span>
-        </div>
-      </a>
-
-      <a class="info-item" href="https://github.com/Nagarajchalla" target="_blank">
-        <i class="fab fa-github"></i>
-        <div>
-          <strong>GitHub</strong>
-          <span>github.com/Nagarajchalla</span>
-        </div>
-      </a>
-
-      <a class="info-item" href="https://www.linkedin.com/in/challa-nagaraju/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-        <div>
-          <strong>LinkedIn</strong>
-          <span>Connect with me</span>
-        </div>
-      </a>
-
-      <div class="info-item">
-        <i class="fas fa-location-dot"></i>
-        <div>
-          <strong>Location</strong>
-          <span>Available for remote work</span>
-        </div>
+        nagarajreddy2219@gmail.com
       </div>
 
+      <div class="info">
+        <i class="fab fa-github"></i>
+        github.com/Nagarajchalla
+      </div>
+
+      <div class="info">
+        <i class="fab fa-linkedin"></i>
+        linkedin.com/in/challa-nagaraju
+      </div>
+
+      <div class="info">
+        <i class="fas fa-location-dot"></i>
+        Available for remote work
+      </div>
     </div>
   </div>
 </section>
