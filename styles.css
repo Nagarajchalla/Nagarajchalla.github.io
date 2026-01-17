@@ -167,4 +167,77 @@ body {
   margin-top: 30px;
   margin-bottom: 8px;
 }
+/* ===================== */
+/* SKILLS PAGE */
+/* ===================== */
+
+.skills-page {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 20px;
+}
+
+.skills-page h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #e5e7eb;
+}
+
+.skills-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 60px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: radial-gradient(circle at top, #0b1220, #050914);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.skill-card h2 {
+  color: #fb923c;
+  margin-bottom: 18px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tags span {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.learning-card {
+  margin-top: 60px;
+  background: radial-gradient(circle at top, #0b1220, #050914);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+.learning-card h2 {
+  color: #fb923c;
+  margin-bottom: 16px;
+}
+
+.learning-card p {
+  color: #9ca3af;
+  line-height: 1.7;
+}
 
