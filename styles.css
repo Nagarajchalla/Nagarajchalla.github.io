@@ -295,3 +295,42 @@ body {
   color: #ff9f40;
   text-decoration: none;
 }
+
+/* Collaborate Section */
+.collaborate-card {
+  margin-top: 30px;
+}
+
+.orange-title {
+  color: #ff8c1a;
+  margin-bottom: 12px;
+}
+
+.collab-text {
+  color: #bfc6d1;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.collab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collab-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: #bfc6d1;
+  font-size: 14px;
+}
+
+.collab-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+  font-size: 12px;
+}
