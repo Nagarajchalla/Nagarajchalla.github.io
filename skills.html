@@ -1,71 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Skills | Nagaraj Challa</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ☰ MENU -->
+<!-- ☰ MENU BUTTON -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="skills.html">Skills</a>
+  <a class="active" href="skills.html">Skills</a>
   <a href="projects.html">Projects</a>
   <a href="index.html#contact">Contact</a>
 </div>
 
-<section class="about-page">
+<section class="skills-page">
   <h1>Skills & Technologies</h1>
-  <p class="about-subtitle">
+  <p class="skills-subtitle">
     Technologies and tools I work with to bring ideas to life
   </p>
 
-  <div class="about-card">
+  <div class="skills-grid">
 
-    <h2 class="section-title">Cloud Technologies</h2>
-    <p>AWS • Azure • Google Cloud</p>
+    <!-- Cloud -->
+    <div class="skill-card">
+      <h2>Cloud Technologies</h2>
+      <div class="skill-tags">
+        <span>AWS</span><span>Azure</span><span>Google Cloud</span>
+      </div>
+    </div>
 
-    <h2 class="section-title">CI/CD Tools</h2>
-    <p>Jenkins • GitHub Actions • GitLab</p>
+    <!-- CI/CD -->
+    <div class="skill-card">
+      <h2>CI/CD Tools</h2>
+      <div class="skill-tags">
+        <span>Jenkins</span><span>GitHub Actions</span><span>GitLab</span>
+      </div>
+    </div>
 
-    <h2 class="section-title">Tools & Platforms</h2>
-    <p>
-      Git • GitHub • Bitbucket • Docker • Kubernetes • Terraform • Pulumi • ArgoCD<br>
-      Apache Kafka • RabbitMQ • Nginx • Bash Scripting • Python • Linux
-    </p>
+    <!-- Tools -->
+    <div class="skill-card">
+      <h2>Tools & Platforms</h2>
+      <div class="skill-tags">
+        <span>Git</span><span>GitHub</span><span>Bitbucket</span>
+        <span>Docker</span><span>Kubernetes</span><span>Terraform</span>
+        <span>Pulumi</span><span>ArgoCD</span>
+        <span>Apache Kafka</span><span>RabbitMQ</span>
+        <span>Nginx</span><span>Bash</span><span>Python</span><span>Linux</span>
+        <span>Trivy</span><span>OWASP</span>
+      </div>
+    </div>
 
-    <h2 class="section-title">Configuration Management</h2>
-    <p>Ansible • Helm • Kustomize • Terraform</p>
+    <!-- Config -->
+    <div class="skill-card">
+      <h2>Configuration Management</h2>
+      <div class="skill-tags">
+        <span>Ansible</span><span>Helm</span><span>Kustomize</span><span>Terraform</span>
+      </div>
+    </div>
 
-    <h2 class="section-title">Monitoring & Logging</h2>
-    <p>
-      Prometheus • Grafana • Loki • FluentBit • Promtail • NewRelic
-    </p>
+    <!-- Monitoring -->
+    <div class="skill-card">
+      <h2>Monitoring & Logging</h2>
+      <div class="skill-tags">
+        <span>Prometheus</span><span>Grafana</span><span>Loki</span>
+        <span>FluentBit</span><span>Promtail</span><span>NewRelic</span>
+      </div>
+    </div>
 
-    <h2 class="section-title">Security</h2>
-    <p>Trivy • OWASP</p>
+    <!-- Education -->
+    <div class="skill-card">
+      <h2>Education & Certifications</h2>
+      <div class="skill-tags">
+        <span>B.Tech (EEE)</span>
+        <span>Fundamentals of AWS</span>
+        <span>DevOps Fundamentals</span>
+      </div>
+    </div>
 
-    <h2 class="section-title">Education & Certifications</h2>
-    <p>
-      B.Tech – Electrical and Electronics Engineering<br>
-      Fundamentals of AWS<br>
-      DevOps Fundamentals
-    </p>
+  </div>
 
-    <h2 class="section-title">Always Learning</h2>
+  <!-- Always Learning -->
+  <div class="learning-card">
+    <h2>Always Learning</h2>
     <p>
       The tech industry evolves rapidly, and I'm committed to continuous learning.
       I regularly explore new frameworks, attend workshops, and contribute to
       open-source projects to stay at the forefront of DevOps.
     </p>
-
   </div>
+
 </section>
 
 <script>
