@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills | Nagaraj Challa</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- ☰ MENU -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<section class="about-page">
+  <h1>Skills & Technologies</h1>
+  <p class="about-subtitle">
+    Technologies and tools I work with to bring ideas to life
+  </p>
+
+  <div class="about-card">
+
+    <h2 class="section-title">Cloud Technologies</h2>
+    <p>AWS • Azure • Google Cloud</p>
+
+    <h2 class="section-title">CI/CD Tools</h2>
+    <p>Jenkins • GitHub Actions • GitLab</p>
+
+    <h2 class="section-title">Tools & Platforms</h2>
+    <p>
+      Git • GitHub • Bitbucket • Docker • Kubernetes • Terraform • Pulumi • ArgoCD<br>
+      Apache Kafka • RabbitMQ • Nginx • Bash Scripting • Python • Linux
+    </p>
+
+    <h2 class="section-title">Configuration Management</h2>
+    <p>Ansible • Helm • Kustomize • Terraform</p>
+
+    <h2 class="section-title">Monitoring & Logging</h2>
+    <p>
+      Prometheus • Grafana • Loki • FluentBit • Promtail • NewRelic
+    </p>
+
+    <h2 class="section-title">Security</h2>
+    <p>Trivy • OWASP</p>
+
+    <h2 class="section-title">Education & Certifications</h2>
+    <p>
+      B.Tech – Electrical and Electronics Engineering<br>
+      Fundamentals of AWS<br>
+      DevOps Fundamentals
+    </p>
+
+    <h2 class="section-title">Always Learning</h2>
+    <p>
+      The tech industry evolves rapidly, and I'm committed to continuous learning.
+      I regularly explore new frameworks, attend workshops, and contribute to
+      open-source projects to stay at the forefront of DevOps.
+    </p>
+
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
