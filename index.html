@@ -2,55 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nagaraj Challa | DevOps & Security Engineer</title>
 
   <style>
     body {
       margin: 0;
       font-family: Inter, system-ui, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #020617);
+      background: radial-gradient(circle at top left, #111827, #020617);
       color: #e5e7eb;
     }
 
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 60px 30px;
+      padding: 70px 30px;
     }
 
+    /* HERO */
     header {
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 60px;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 80px;
       align-items: center;
-      margin-bottom: 100px;
+      margin-bottom: 120px;
+    }
+
+    .hello {
+      color: #9ca3af;
+      font-size: 18px;
+      margin-bottom: 8px;
     }
 
     h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
+      font-size: 56px;
+      margin: 0 0 14px;
+    }
+
+    .passionate {
+      font-size: 20px;
+      color: #9ca3af;
     }
 
     .role {
-      font-size: 24px;
+      font-size: 26px;
       color: #f97316;
-      margin-bottom: 16px;
+      margin: 10px 0 18px;
+      font-weight: 600;
     }
 
     .tagline {
       color: #9ca3af;
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 36px;
     }
 
+    /* BUTTONS */
     .buttons a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       padding: 14px 26px;
       margin-right: 14px;
-      margin-bottom: 12px;
-      border-radius: 10px;
-      font-weight: 600;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      provefont-weight: 600;
       text-decoration: none;
       font-size: 15px;
     }
@@ -61,20 +77,20 @@
     }
 
     .secondary {
-      border: 1px solid #475569;
+      border: 1px solid #334155;
       color: #e5e7eb;
+      background: rgba(255,255,255,0.02);
     }
 
-    /* PROFILE IMAGE */
+    /* PROFILE IMAGE (FIXED LIKE SAMPLE) */
     .profile-wrapper {
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     .profile-ring {
-      width: 300px;
-      height: 300px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
       background: linear-gradient(135deg, #f97316, #fb923c);
       padding: 6px;
@@ -84,31 +100,30 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      object-fit: contain;
-      object-position: center top;
+      object-fit: cover;
+      object-position: center top; /* 🔥 keeps hair */
       background: #020617;
     }
 
+    /* SECTIONS */
     section {
-      margin-bottom: 70px;
+      margin-bottom: 90px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 22px;
       border-left: 5px solid #f97316;
       padding-left: 14px;
     }
 
-    ul {
-      padding-left: 20px;
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #cbd5f5;
     }
 
-    li {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
+    /* SKILLS */
     .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -123,11 +138,25 @@
       font-size: 15px;
     }
 
+    /* PROJECTS */
+    .project {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .project h3 {
+      margin: 0 0 10px;
+      color: #f97316;
+    }
+
     footer {
       text-align: center;
       color: #64748b;
       font-size: 14px;
-      margin-top: 100px;
+      margin-top: 120px;
     }
 
     @media (max-width: 900px) {
@@ -135,108 +164,111 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
-
-      .buttons {
-        text-align: center;
-      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <header>
-      <div>
-        <h1>Nagaraj Challa</h1>
-        <div class="role">DevOps & Security Engineer</div>
+  <!-- HERO -->
+  <header>
+    <div>
+      <div class="hello">👋 Hello, I'm</div>
 
-        <p class="tagline">
-          AWS • Azure • Kubernetes • CI/CD • Cloud Security <br />
-          Building scalable & secure cloud infrastructure 🚀
-        </p>
+      <h1>Nagaraj Challa</h1>
 
-        <div class="buttons">
-          <a class="primary" href="resume.pdf">⬇ Download Resume</a>
+      <div class="passionate">I'm a passionate</div>
+      <div class="role">DevOps & Security Engineer ⚙️</div>
 
-          <a class="secondary" href="https://linkedin.com/in/challa-nagaraju" target="_blank">
-            🔗 LinkedIn
-          </a>
-
-          <a class="secondary" href="mailto:nagarajreddy2219@gmail.com">
-            📧 Email
-          </a>
-
-          <a class="secondary" href="tel:+918125377673">
-            📞 Call
-          </a>
-        </div>
+      <div class="tagline">
+        AWS • Azure • Kubernetes • CI/CD • Cloud Security <br />
+        Building scalable & secure cloud infrastructure 🚀
       </div>
 
-      <div class="profile-wrapper">
-        <div class="profile-ring">
-          <img src="profile.jpg" alt="Nagaraj Challa" />
-        </div>
-      </div>
-    </header>
+      <div class="buttons">
+        <a class="primary" href="resume.pdf">⬇ Download Resume</a>
 
-    <!-- ABOUT -->
-    <section>
-      <h2>About Me</h2>
+        <a class="secondary" href="https://linkedin.com/in/challa-nagaraju" target="_blank">
+          🔗 LinkedIn
+        </a>
+
+        <a class="secondary" href="mailto:nagarajreddy2219@gmail.com">
+          ✉️ Email
+        </a>
+
+        <a class="secondary" href="tel:+918125377673">
+          📞 Call
+        </a>
+      </div>
+    </div>
+
+    <div class="profile-wrapper">
+      <div class="profile-ring">
+        <img src="profile.jpg" alt="Nagaraj Challa">
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      DevOps & Security Engineer with 2.6 years of experience across AWS and Azure.
+      Strong expertise in CI/CD automation, Kubernetes, cloud security,
+      observability, and production-grade infrastructure.
+      Hands-on experience implementing and maintaining
+      <strong>SOC 2 compliance</strong> using audit-ready DevOps and security practices.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Omnibound – Production CI/CD & EKS Platform</h3>
       <p>
-        DevOps & Security Engineer with 2.6 years of experience across AWS and Azure cloud platforms.
-        Strong expertise in CI/CD automation, Kubernetes, cloud security, observability,
-        and production-grade infrastructure.
-        Hands-on experience in implementing and maintaining
-        <strong>SOC 2 compliance</strong> using secure DevOps practices,
-        automated security scanning, monitoring, and audit-ready workflows.
+        Designed and maintained end-to-end CI/CD pipelines using Jenkins, Docker,
+        and ArgoCD. Deployed secure workloads on AWS EKS with Cloudflare CDN & WAF.
+        Implemented SOC 2 security controls using SonarQube, OWASP ZAP,
+        GitGuardian, and Sentry.
       </p>
-    </section>
+    </div>
 
-    <!-- EXPERIENCE -->
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Omnibound (USA)</strong> — AWS DevOps & Security Engineer (2025–Present)
-        </li>
-        <li>
-          <strong>Omnineura AI Technologies</strong> — Azure DevOps Engineer (2023–2025)
-        </li>
-      </ul>
-    </section>
+    <div class="project">
+      <h3>Omnineura – Azure Kubernetes Platform</h3>
+      <p>
+        Built CI/CD pipelines for multiple microservices.
+        Containerized applications using Docker and deployed them to AKS.
+        Improved deployment reliability, scalability, and monitoring.
+      </p>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill">AWS (EC2, EKS, IAM, RDS, CloudWatch)</div>
-        <div class="skill">Azure (AKS, ACR)</div>
-        <div class="skill">Kubernetes (EKS, AKS)</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Jenkins</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">Terraform</div>
-        <div class="skill">CI/CD Automation</div>
-        <div class="skill">Cloud Security</div>
-        <div class="skill">SOC 2 Compliance</div>
-        <div class="skill">Cloudflare (CDN & WAF)</div>
-        <div class="skill">Linux</div>
-        <div class="skill">Monitoring & Observability</div>
-        <div class="skill">Prometheus & Grafana</div>
-        <div class="skill">MySQL & Aurora PostgreSQL</div>
-        <div class="skill">SonarQube</div>
-        <div class="skill">OWASP ZAP</div>
-        <div class="skill">Sentry</div>
-        <div class="skill">GitGuardian</div>
-      </div>
-    </section>
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">AWS (EC2, EKS, IAM, RDS, CloudWatch)</div>
+      <div class="skill">Azure (AKS, ACR)</div>
+      <div class="skill">Kubernetes (EKS, AKS)</div>
+      <div class="skill">Docker</div>
+      <div class="skill">Jenkins</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Terraform</div>
+      <div class="skill">Cloud Security</div>
+      <div class="skill">SOC 2 Compliance</div>
+      <div class="skill">Cloudflare (CDN & WAF)</div>
+      <div class="skill">Prometheus & Grafana</div>
+      <div class="skill">SonarQube • OWASP ZAP • Sentry • GitGuardian</div>
+    </div>
+  </section>
 
-    <footer>
-      © 2025 Nagaraj Challa • DevOps & Security Engineer
-    </footer>
+  <footer>
+    © 2025 Nagaraj Challa • DevOps & Security Engineer
+  </footer>
 
-  </div>
+</div>
 </body>
 </html>
