@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nagaraj Challa | DevOps & Security Engineer</title>
 
-  <!-- Font Awesome (for icons like Lloyd) -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,6 +17,7 @@
       font-family: "Segoe UI", Tahoma, sans-serif;
       background: radial-gradient(circle at top, #020617, #020617);
       color: #e5e7eb;
+      overflow-x: hidden;
     }
 
     .container {
@@ -29,9 +30,10 @@
       gap: 40px;
     }
 
-    /* LEFT CONTENT */
     .content {
       max-width: 620px;
+      position: relative;
+      z-index: 10;
     }
 
     .hello {
@@ -61,7 +63,6 @@
 
     .gear {
       color: #f97316;
-      margin-left: 6px;
     }
 
     .stack {
@@ -70,11 +71,12 @@
       line-height: 1.6;
     }
 
-    /* SOCIAL ICONS (LIKE LLOYD) */
     .social-icons {
       display: flex;
       gap: 14px;
       margin: 22px 0 26px;
+      position: relative;
+      z-index: 20;
     }
 
     .social-icons a {
@@ -82,7 +84,7 @@
       height: 46px;
       border-radius: 10px;
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -99,10 +101,11 @@
       box-shadow: 0 0 18px rgba(249, 115, 22, 0.45);
     }
 
-    /* BUTTONS */
     .buttons {
       display: flex;
       gap: 16px;
+      position: relative;
+      z-index: 20;
     }
 
     .buttons a {
@@ -111,7 +114,6 @@
       font-size: 16px;
       text-decoration: none;
       transition: all 0.25s ease;
-      border: 1px solid transparent;
     }
 
     .primary {
@@ -133,10 +135,8 @@
       color: #f97316;
       border-color: #f97316;
       background: rgba(249, 115, 22, 0.08);
-      box-shadow: 0 0 18px rgba(249, 115, 22, 0.4);
     }
 
-    /* PROFILE IMAGE */
     .profile-ring {
       width: 360px;
       height: 360px;
@@ -151,12 +151,50 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: center 20%;
-      background: #020617;
     }
 
-    .profile-ring:hover {
-      box-shadow: 0 0 30px rgba(249, 115, 22, 0.45);
-      transition: box-shadow 0.3s ease;
+    /* ===== HAMBURGER MENU ===== */
+    .menu-btn {
+      position: fixed;
+      top: 22px;
+      right: 28px;
+      font-size: 26px;
+      color: #f97316;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100%;
+      background: #020617;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
+      padding-top: 100px;
+      transition: right 0.35s ease;
+      z-index: 999;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 16px 32px;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 18px;
+      border-left: 4px solid transparent;
+      transition: all 0.25s ease;
+    }
+
+    .side-menu a:hover {
+      color: #f97316;
+      border-left-color: #f97316;
+      background: rgba(249, 115, 22, 0.08);
+    }
+
+    .side-menu.open {
+      right: 0;
     }
 
     @media (max-width: 900px) {
@@ -174,48 +212,65 @@
 </head>
 
 <body>
-  <div class="container">
-    <!-- LEFT -->
-    <div class="content">
-      <div class="hello">👋 Hello, I'm</div>
 
-      <h1>Nagaraj Challa</h1>
+<!-- Hamburger -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-      <div class="passionate">I'm a passionate</div>
+<!-- Sidebar -->
+<div id="side-menu" class="side-menu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
-      <div class="role">
-        DevOps & Security Engineer <span class="gear">⚙️</span>
-      </div>
+<div class="container">
+  <div class="content">
+    <div class="hello">👋 Hello, I'm</div>
+    <h1>Nagaraj Challa</h1>
+    <div class="passionate">I'm a passionate</div>
 
-      <div class="stack">
-        AWS • Azure • Kubernetes • CI/CD • Cloud Security <br />
-        Building scalable & secure cloud infrastructure 🚀
-      </div>
-
-      <!-- ICONS ABOVE BUTTONS -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/challa-nagaraju" target="_blank">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:nagarajreddy2219@gmail.com">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="tel:+918125377673">
-          <i class="fa-solid fa-phone"></i>
-        </a>
-      </div>
-
-      <!-- BUTTONS -->
-      <div class="buttons">
-        <a class="primary" href="resume.pdf" download>Download Resume</a>
-        <a class="secondary" href="projects.html">View Projects</a>
-      </div>
+    <div class="role">
+      DevOps & Security Engineer <span class="gear">⚙️</span>
     </div>
 
-    <!-- RIGHT -->
-    <div class="profile-ring">
-      <img src="profile.jpg" alt="Nagaraj Challa" />
+    <div class="stack">
+      AWS • Azure • Kubernetes • CI/CD • Cloud Security <br />
+      Building scalable & secure cloud infrastructure 🚀
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/challa-nagaraju" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:nagarajreddy2219@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+      <a href="tel:+918125377673">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+
+    <div class="buttons">
+      <a class="primary" href="resume.pdf" download>Download Resume</a>
+      <a class="secondary" href="projects.html">View Projects</a>
     </div>
   </div>
+
+  <div class="profile-ring">
+    <img src="profile.jpg" alt="Nagaraj Challa" />
+  </div>
+</div>
+
+<!-- Dummy anchors (no visual change) -->
+<div id="about"></div>
+<div id="skills"></div>
+<div id="contact"></div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("side-menu").classList.toggle("open");
+  }
+</script>
+
 </body>
 </html>
