@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Nagaraj Challa</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- ☰ MENU -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<section class="about-page">
+  <h1>About Me</h1>
+  <p class="about-subtitle">
+    Learn more about my journey and passion for technology
+  </p>
+
+  <div class="about-card">
+    <p>
+      I'm a passionate Cloud DevOps engineer with a love for creating innovative digital experiences.
+      My journey in technology started with curiosity and has evolved into a career dedicated to
+      building cloud infrastructure that make a difference.
+    </p>
+
+    <p>
+      With a strong foundation in modern cloud technologies, I specialize in building scalable,
+      efficient, and functional systems. I prioritize a security-first approach in deploying applications
+      that are maintainable and user-friendly, ensuring they deliver real value to both users and businesses.
+    </p>
+
+    <p>
+      When I'm not in the cloud, you can find me exploring new technologies, contributing to open-source
+      projects, or sharing my knowledge through blog posts and community engagement.
+    </p>
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
