@@ -2,155 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Nagaraj Challa | DevOps & Security Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagaraj Challa | DevOps Engineer</title>
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
 <body>
 
-<!-- ================= HEADER / HERO ================= -->
-<header class="hero">
+<!-- Sidebar Toggle -->
+<div class="menu-btn" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
 
-  <!-- Hamburger -->
-  <div class="menu-btn" id="menuBtn">
-    <i class="fas fa-bars"></i>
-  </div>
+<!-- Sidebar -->
+<nav id="sidebar">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</nav>
 
-  <!-- Slide Menu -->
-  <nav class="side-menu" id="sideMenu">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero-content">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
     <p class="hello">👋 Hello, I'm</p>
     <h1>Nagaraj Challa</h1>
-
     <h2>
       DevOps & Security Engineer
-      <i class="fas fa-gear orange"></i>
+      <span class="gear">⚙️</span>
     </h2>
 
-    <p class="subtitle">
-      AWS • Azure • Kubernetes • CI/CD • Cloud Security<br>
+    <p class="stack">
+      AWS • Azure • Kubernetes • CI/CD • Cloud Security
+    </p>
+    <p class="tagline">
       Building scalable & secure cloud infrastructure 🚀
     </p>
 
-    <!-- Social icons -->
+    <!-- Social Icons -->
     <div class="socials">
-      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="mailto:nagarajredd2219@gmail.com">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="tel:+91XXXXXXXXXX">
-        <i class="fas fa-phone"></i>
-      </a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:nagarajredd2219@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+91XXXXXXXXXX"><i class="fas fa-phone"></i></a>
     </div>
 
     <!-- Buttons -->
     <div class="buttons">
-      <a href="resume.pdf" class="btn primary" download>Download Resume</a>
-      <a href="#projects" class="btn secondary">View Projects</a>
+      <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+      <a class="btn secondary" href="#skills">View Projects</a>
     </div>
   </div>
 
-  <div class="hero-image">
+  <div class="hero-img">
     <img src="profile.jpg" alt="Nagaraj Challa">
   </div>
-</header>
+</section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 <section id="about" class="section">
   <h2>About Me</h2>
-  <p class="section-subtitle">
-    Learn more about my journey and passion for technology
-  </p>
+  <p class="subtitle">Learn more about my journey and passion for technology</p>
 
   <div class="card">
     <p>
-      I'm a passionate Cloud & DevOps engineer with a strong focus on building
-      scalable, secure, and reliable infrastructure.
-    </p>
-    <p>
-      My journey started with curiosity and evolved into delivering production-grade
-      cloud solutions using modern DevOps and security practices.
-    </p>
-    <p>
-      I believe in security-first design, automation, and continuous improvement.
+      I'm a passionate Cloud & DevOps engineer focused on building scalable,
+      secure, and production-ready infrastructure. I specialize in CI/CD,
+      Kubernetes, cloud security, and automation.
     </p>
   </div>
 </section>
 
-<!-- ================= SKILLS ================= -->
+<!-- SKILLS -->
 <section id="skills" class="section">
   <h2>Skills & Technologies</h2>
-  <p class="section-subtitle">
-    Technologies and tools I work with
-  </p>
 
   <div class="grid">
-    <div class="skill-card">
+    <div class="card">
       <h3>Cloud</h3>
-      <span>AWS</span><span>Azure</span><span>GCP</span>
+      <p>AWS, Azure, GCP</p>
     </div>
 
-    <div class="skill-card">
+    <div class="card">
       <h3>CI/CD</h3>
-      <span>Jenkins</span><span>GitHub Actions</span><span>GitLab</span>
+      <p>Jenkins, GitHub Actions, GitLab</p>
     </div>
 
-    <div class="skill-card">
+    <div class="card">
       <h3>DevOps</h3>
-      <span>Docker</span><span>Kubernetes</span><span>ArgoCD</span>
+      <p>Docker, Kubernetes, ArgoCD, Terraform</p>
     </div>
 
-    <div class="skill-card">
-      <h3>IaC</h3>
-      <span>Terraform</span><span>Helm</span><span>Ansible</span>
-    </div>
-
-    <div class="skill-card">
-      <h3>Education</h3>
-      <span>B.Tech – Electrical Engineering</span>
-      <span>Fundamentals of AWS</span>
+    <div class="card">
+      <h3>Monitoring</h3>
+      <p>Prometheus, Grafana, Loki</p>
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Get In Touch</h2>
-  <p class="section-subtitle">
-    Feel free to reach out for collaboration or opportunities
-  </p>
 
-  <div class="contact-card">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <span>nagarajredd2219@gmail.com</span>
-    </div>
-
-    <div class="contact-item">
-      <i class="fab fa-github"></i>
-      <span>github.com/YOUR_GITHUB_ID</span>
-    </div>
-
-    <div class="contact-item">
-      <i class="fab fa-linkedin"></i>
-      <span>linkedin.com/in/YOUR_LINKEDIN_ID</span>
-    </div>
-
-    <div class="contact-item">
-      <i class="fas fa-location-dot"></i>
-      <span>Available for remote work</span>
-    </div>
+  <div class="card contact-card">
+    <p><i class="fas fa-envelope"></i> nagarajredd2219@gmail.com</p>
+    <p><i class="fab fa-github"></i> github.com/nagarajchalla</p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn Profile</p>
+    <p><i class="fas fa-location-dot"></i> Available for remote work</p>
   </div>
 </section>
 
