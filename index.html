@@ -2,220 +2,308 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nagaraj Challa | DevOps & Security Engineer</title>
 
-  <!-- Font Awesome (for icons like Lloyd) -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-dark: #050b1a;
+      --bg-card: #0c1329;
+      --accent: #ff8a1f;
+      --text-light: #cfd6f0;
+      --text-muted: #9aa4c7;
+      --border-soft: rgba(255,255,255,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
     body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: radial-gradient(circle at top, #020617, #020617);
-      color: #e5e7eb;
+      background: radial-gradient(circle at top, #0b1538, #020714);
+      color: var(--text-light);
+      overflow-x: hidden;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    /* LEFT CONTENT */
-    .content {
-      max-width: 620px;
+    /* ================= HEADER ================= */
+    header {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
     }
 
-    .hello {
-      color: #94a3b8;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 56px;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    .passionate {
-      color: #94a3b8;
-      margin: 12px 0 6px;
-      font-size: 18px;
-    }
-
-    .role {
-      font-size: 28px;
-      color: #f97316;
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-
-    .gear {
-      color: #f97316;
-      margin-left: 6px;
-    }
-
-    .stack {
-      color: #cbd5f5;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    /* SOCIAL ICONS (LIKE LLOYD) */
-    .social-icons {
-      display: flex;
-      gap: 14px;
-      margin: 22px 0 26px;
-    }
-
-    .social-icons a {
-      width: 46px;
-      height: 46px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .menu-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #cbd5e1;
-      font-size: 18px;
-      transition: all 0.25s ease;
-      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .social-icons a:hover {
-      color: #f97316;
-      border-color: #f97316;
-      background: rgba(249, 115, 22, 0.12);
-      box-shadow: 0 0 18px rgba(249, 115, 22, 0.45);
+    .menu-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
-    /* BUTTONS */
-    .buttons {
-      display: flex;
-      gap: 16px;
-    }
-
-    .buttons a {
-      padding: 14px 26px;
-      border-radius: 12px;
-      font-size: 16px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      border: 1px solid transparent;
-    }
-
-    .primary {
-      background: #f97316;
-      color: #020617;
-      font-weight: 600;
-    }
-
-    .primary:hover {
-      box-shadow: 0 0 22px rgba(249, 115, 22, 0.6);
-    }
-
-    .secondary {
-      color: #e5e7eb;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .secondary:hover {
-      color: #f97316;
-      border-color: #f97316;
-      background: rgba(249, 115, 22, 0.08);
-      box-shadow: 0 0 18px rgba(249, 115, 22, 0.4);
-    }
-
-    /* PROFILE IMAGE */
-    .profile-ring {
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, #f97316, #fb923c);
-    }
-
-    .profile-ring img {
-      width: 100%;
+    /* ================= SIDE MENU ================= */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
       height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 20%;
-      background: #020617;
+      background: #060c1e;
+      padding: 30px;
+      transition: 0.4s ease;
+      z-index: 999;
     }
 
-    .profile-ring:hover {
-      box-shadow: 0 0 30px rgba(249, 115, 22, 0.45);
-      transition: box-shadow 0.3s ease;
+    .side-menu.active {
+      right: 0;
     }
 
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column-reverse;
-        text-align: center;
+    .side-menu h3 {
+      color: var(--accent);
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .side-menu a {
+      display: block;
+      margin: 18px 0;
+      font-size: 16px;
+      color: var(--text-light);
+      transition: 0.3s;
+    }
+
+    .side-menu a:hover {
+      color: var(--accent);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      color: var(--accent);
+    }
+
+    /* ================= SECTION ================= */
+    section {
+      padding: 100px 10%;
+    }
+
+    /* ================= CONTACT ================= */
+    .contact-title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-box {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 35px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .contact-box h3 {
+      color: var(--accent);
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .contact-box p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .status-list {
+      margin-top: 20px;
+    }
+
+    .status-list li {
+      margin-bottom: 10px;
+      list-style: none;
+    }
+
+    .status-list li::before {
+      content: "●";
+      color: #2ecc71;
+      margin-right: 10px;
+    }
+
+    /* ================= INFO LIST ================= */
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      border-radius: 14px;
+      margin-bottom: 15px;
+      transition: 0.3s;
+      border: 1px solid var(--border-soft);
+    }
+
+    .info-item:hover {
+      border-color: var(--accent);
+      background: rgba(255,138,31,0.05);
+    }
+
+    .info-item i {
+      font-size: 20px;
+      color: var(--accent);
+      width: 30px;
+      text-align: center;
+    }
+
+    .info-item span {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 15px;
+      color: var(--text-light);
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width: 900px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
       }
-
-      .buttons,
-      .social-icons {
-        justify-content: center;
+      section {
+        padding: 80px 6%;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+
+<!-- MENU BUTTON -->
+<header>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <i class="fas fa-times close-btn" onclick="toggleMenu()"></i>
+  <h3>Menu</h3>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <h1 class="contact-title">Get In Touch</h1>
+  <p class="contact-subtitle">
+    I’m always open to discussing new opportunities, DevOps challenges,
+    cloud security projects, or long-term collaborations. Feel free to reach out.
+  </p>
+
+  <div class="contact-wrapper">
+
     <!-- LEFT -->
-    <div class="content">
-      <div class="hello">👋 Hello, I'm</div>
+    <div class="contact-box">
+      <h3>Let’s Collaborate</h3>
+      <p>
+        Whether you’re a company looking for a reliable DevOps & Security Engineer,
+        a startup needing scalable cloud infrastructure, or a team seeking automation
+        and compliance support — I’m happy to connect.
+      </p>
 
-      <h1>Nagaraj Challa</h1>
-
-      <div class="passionate">I'm a passionate</div>
-
-      <div class="role">
-        DevOps & Security Engineer <span class="gear">⚙️</span>
-      </div>
-
-      <div class="stack">
-        AWS • Azure • Kubernetes • CI/CD • Cloud Security <br />
-        Building scalable & secure cloud infrastructure 🚀
-      </div>
-
-      <!-- ICONS ABOVE BUTTONS -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/challa-nagaraju" target="_blank">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:nagarajreddy2219@gmail.com">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="tel:+918125377673">
-          <i class="fa-solid fa-phone"></i>
-        </a>
-      </div>
-
-      <!-- BUTTONS -->
-      <div class="buttons">
-        <a class="primary" href="resume.pdf" download>Download Resume</a>
-        <a class="secondary" href="projects.html">View Projects</a>
-      </div>
+      <ul class="status-list">
+        <li>Available for remote work</li>
+        <li>Open to freelance & contract roles</li>
+        <li>Interested in long-term collaborations</li>
+      </ul>
     </div>
 
     <!-- RIGHT -->
-    <div class="profile-ring">
-      <img src="profile.jpg" alt="Nagaraj Challa" />
+    <div class="contact-box">
+      <h3>Contact Information</h3>
+
+      <a class="info-item" href="mailto:nagarajreddy2219@gmail.com">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>Email</strong>
+          <span>nagarajreddy2219@gmail.com</span>
+        </div>
+      </a>
+
+      <a class="info-item" href="https://github.com/Nagarajchalla" target="_blank">
+        <i class="fab fa-github"></i>
+        <div>
+          <strong>GitHub</strong>
+          <span>github.com/Nagarajchalla</span>
+        </div>
+      </a>
+
+      <a class="info-item" href="https://www.linkedin.com/in/challa-nagaraju/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+        <div>
+          <strong>LinkedIn</strong>
+          <span>Connect with me</span>
+        </div>
+      </a>
+
+      <div class="info-item">
+        <i class="fas fa-location-dot"></i>
+        <div>
+          <strong>Location</strong>
+          <span>Available for remote work</span>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>
