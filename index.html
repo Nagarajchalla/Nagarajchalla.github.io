@@ -27,8 +27,8 @@
     }
 
     .hello {
-      color: #9ca3af;
       font-size: 18px;
+      color: #9ca3af;
       margin-bottom: 12px;
     }
 
@@ -49,6 +49,11 @@
       margin: 8px 0 18px;
     }
 
+    .gear {
+      color: #f97316;
+      display: inline-block;
+    }
+
     .tagline {
       color: #9ca3af;
       font-size: 18px;
@@ -56,7 +61,7 @@
       line-height: 1.6;
     }
 
-    /* ICON ROW (LIKE LLOYD) */
+    /* SOCIAL ICONS (LIKE LLOYD) */
     .socials {
       display: flex;
       gap: 14px;
@@ -139,6 +144,11 @@
       border-radius: 50%;
       padding: 6px;
       background: linear-gradient(135deg, #f97316, #fb923c);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .profile-ring:hover {
+      box-shadow: 0 0 35px rgba(249,115,22,0.45);
     }
 
     .profile-ring img {
@@ -147,6 +157,7 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: center 20%;
+      background: #020617;
     }
 
     @media (max-width: 900px) {
@@ -175,14 +186,16 @@
       <h1>Nagaraj Challa</h1>
 
       <div class="passionate">I'm a passionate</div>
-      <div class="role">DevOps & Security Engineer ⚙️</div>
+      <div class="role">
+        DevOps & Security Engineer <span class="gear">⚙️</span>
+      </div>
 
       <div class="tagline">
         AWS • Azure • Kubernetes • CI/CD • Cloud Security<br>
         Building scalable & secure cloud infrastructure 🚀
       </div>
 
-      <!-- SOCIAL ICONS (ABOVE BUTTONS LIKE LLOYD) -->
+      <!-- SOCIAL ICONS -->
       <div class="socials">
         <!-- LinkedIn -->
         <a class="social" href="https://linkedin.com/in/challa-nagaraju" target="_blank">
