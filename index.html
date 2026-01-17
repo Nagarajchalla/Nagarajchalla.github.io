@@ -16,48 +16,45 @@
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 70px 30px;
+      padding: 80px 30px;
     }
 
-    /* HERO */
     header {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
       gap: 80px;
       align-items: center;
-      margin-bottom: 120px;
     }
 
     .hello {
       color: #9ca3af;
       font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     h1 {
       font-size: 56px;
-      margin: 0 0 14px;
+      margin: 0 0 12px;
     }
 
     .passionate {
-      font-size: 20px;
       color: #9ca3af;
+      font-size: 20px;
     }
 
     .role {
       font-size: 26px;
       color: #f97316;
-      margin: 10px 0 18px;
+      margin: 8px 0 18px;
       font-weight: 600;
     }
 
     .tagline {
       color: #9ca3af;
       font-size: 18px;
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
 
-    /* BUTTONS */
     .buttons a {
       display: inline-flex;
       align-items: center;
@@ -66,7 +63,7 @@
       margin-right: 14px;
       margin-bottom: 14px;
       border-radius: 12px;
-      provefont-weight: 600;
+      font-weight: 600;
       text-decoration: none;
       font-size: 15px;
     }
@@ -82,7 +79,6 @@
       background: rgba(255,255,255,0.02);
     }
 
-    /* PROFILE IMAGE (FIXED LIKE SAMPLE) */
     .profile-wrapper {
       display: flex;
       justify-content: center;
@@ -101,62 +97,8 @@
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center top; /* 🔥 keeps hair */
+      object-position: center top;
       background: #020617;
-    }
-
-    /* SECTIONS */
-    section {
-      margin-bottom: 90px;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 22px;
-      border-left: 5px solid #f97316;
-      padding-left: 14px;
-    }
-
-    p {
-      font-size: 17px;
-      line-height: 1.7;
-      color: #cbd5f5;
-    }
-
-    /* SKILLS */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .skill {
-      background: #020617;
-      border: 1px solid #1e293b;
-      padding: 14px 16px;
-      border-radius: 10px;
-      font-size: 15px;
-    }
-
-    /* PROJECTS */
-    .project {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 12px;
-      padding: 22px;
-      margin-bottom: 20px;
-    }
-
-    .project h3 {
-      margin: 0 0 10px;
-      color: #f97316;
-    }
-
-    footer {
-      text-align: center;
-      color: #64748b;
-      font-size: 14px;
-      margin-top: 120px;
     }
 
     @media (max-width: 900px) {
@@ -171,7 +113,6 @@
 <body>
 <div class="container">
 
-  <!-- HERO -->
   <header>
     <div>
       <div class="hello">👋 Hello, I'm</div>
@@ -189,17 +130,13 @@
       <div class="buttons">
         <a class="primary" href="resume.pdf">⬇ Download Resume</a>
 
-        <a class="secondary" href="https://linkedin.com/in/challa-nagaraju" target="_blank">
-          🔗 LinkedIn
-        </a>
+        <a class="secondary" href="projects.html">📂 View Projects</a>
 
-        <a class="secondary" href="mailto:nagarajreddy2219@gmail.com">
-          ✉️ Email
-        </a>
+        <a class="secondary" href="https://linkedin.com/in/challa-nagaraju" target="_blank">🔗 LinkedIn</a>
 
-        <a class="secondary" href="tel:+918125377673">
-          📞 Call
-        </a>
+        <a class="secondary" href="mailto:nagarajreddy2219@gmail.com">✉️ Email</a>
+
+        <a class="secondary" href="tel:+918125377673">📞 Call</a>
       </div>
     </div>
 
@@ -209,65 +146,6 @@
       </div>
     </div>
   </header>
-
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      DevOps & Security Engineer with 2.6 years of experience across AWS and Azure.
-      Strong expertise in CI/CD automation, Kubernetes, cloud security,
-      observability, and production-grade infrastructure.
-      Hands-on experience implementing and maintaining
-      <strong>SOC 2 compliance</strong> using audit-ready DevOps and security practices.
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Omnibound – Production CI/CD & EKS Platform</h3>
-      <p>
-        Designed and maintained end-to-end CI/CD pipelines using Jenkins, Docker,
-        and ArgoCD. Deployed secure workloads on AWS EKS with Cloudflare CDN & WAF.
-        Implemented SOC 2 security controls using SonarQube, OWASP ZAP,
-        GitGuardian, and Sentry.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Omnineura – Azure Kubernetes Platform</h3>
-      <p>
-        Built CI/CD pipelines for multiple microservices.
-        Containerized applications using Docker and deployed them to AKS.
-        Improved deployment reliability, scalability, and monitoring.
-      </p>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">AWS (EC2, EKS, IAM, RDS, CloudWatch)</div>
-      <div class="skill">Azure (AKS, ACR)</div>
-      <div class="skill">Kubernetes (EKS, AKS)</div>
-      <div class="skill">Docker</div>
-      <div class="skill">Jenkins</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Terraform</div>
-      <div class="skill">Cloud Security</div>
-      <div class="skill">SOC 2 Compliance</div>
-      <div class="skill">Cloudflare (CDN & WAF)</div>
-      <div class="skill">Prometheus & Grafana</div>
-      <div class="skill">SonarQube • OWASP ZAP • Sentry • GitGuardian</div>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Nagaraj Challa • DevOps & Security Engineer
-  </footer>
 
 </div>
 </body>
