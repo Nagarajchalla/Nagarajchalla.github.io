@@ -2,25 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Nagaraj Challa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="/styles.css" />
+  <!-- MAIN CSS (THIS WAS MISSING) -->
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- ICONS -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 
 <body>
 
 <!-- ☰ MENU BUTTON -->
-<button class="menu-toggle" onclick="toggleMenu()">
-  <i class="fas fa-bars"></i>
-</button>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <!-- SIDE MENU -->
 <nav class="side-menu" id="sideMenu">
@@ -30,65 +25,46 @@
   <a href="/contact.html" class="active">Contact</a>
 </nav>
 
-<!-- ================= CONTACT PAGE ================= -->
+<!-- CONTACT SECTION -->
 <section class="contact-page">
 
-  <!-- HEADER -->
-  <div class="page-header">
-    <h1>Get In Touch</h1>
-    <p>
-      I'm always open to discussing new opportunities, collaborations,
-      or just having a chat about technology. Feel free to reach out!
-    </p>
-  </div>
+  <h1 class="page-title">Get In Touch</h1>
+  <p class="page-subtitle">
+    I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.
+  </p>
 
-  <!-- CONTENT GRID -->
   <div class="contact-grid">
 
     <!-- LEFT IMAGE CARD -->
-    <div class="contact-image-card">
-      <img
-        src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
-        alt="Collaboration"
-      />
-      <div class="image-overlay">
-        <h2>Ready to Collaborate?</h2>
-        <p>
-          Let’s build something amazing together.
-          Reach out through any of the channels listed.
-        </p>
-      </div>
+    <div class="contact-image">
+      <h2>Ready to Collaborate?</h2>
+      <p>Let’s build something amazing together.</p>
     </div>
 
     <!-- RIGHT INFO CARD -->
-    <div class="contact-info-card">
-      <h2>Contact Information</h2>
-      <p>Find me on these platforms or reach out directly.</p>
+    <div class="contact-card">
+      <h3>Contact Information</h3>
 
       <div class="contact-item">
-        <i class="fas fa-envelope"></i>
+        <i class="fa-solid fa-envelope"></i>
         <div>
-          <strong>Email</strong>
-          <a href="mailto:nagarajredd2219@gmail.com">
-            nagarajredd2219@gmail.com
-          </a>
+          <span>Email</span>
+          <a href="mailto:nagarajredd2219@gmail.com">nagarajredd2219@gmail.com</a>
         </div>
       </div>
 
       <div class="contact-item">
-        <i class="fab fa-github"></i>
+        <i class="fa-brands fa-github"></i>
         <div>
-          <strong>GitHub</strong>
-          <a href="https://github.com/Nagarajchalla" target="_blank">
-            Nagarajchalla
-          </a>
+          <span>GitHub</span>
+          <a href="https://github.com/Nagarajchalla" target="_blank">Nagarajchalla</a>
         </div>
       </div>
 
       <div class="contact-item">
-        <i class="fab fa-linkedin"></i>
+        <i class="fa-brands fa-linkedin"></i>
         <div>
-          <strong>LinkedIn</strong>
+          <span>LinkedIn</span>
           <a href="https://www.linkedin.com/in/nagaraj-challa/" target="_blank">
             Connect with me
           </a>
@@ -96,34 +72,19 @@
       </div>
 
       <div class="contact-item">
-        <i class="fas fa-location-dot"></i>
+        <i class="fa-solid fa-location-dot"></i>
         <div>
-          <strong>Location</strong>
-          <span>Available for remote work</span>
+          <span>Location</span>
+          <p>Available for remote work</p>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- LET'S COLLABORATE -->
-  <div class="collaborate-card">
-    <h2>Let's Collaborate</h2>
-    <p>
-      I'm always interested in hearing about new projects and opportunities.
-      Whether you're a company looking to hire, a fellow developer wanting to
-      collaborate, or someone with an interesting idea — I’d love to hear from you.
-    </p>
-
-    <ul>
-      <li>Available for freelance projects</li>
-      <li>Open to full-time opportunities</li>
-      <li>Interested in collaborative projects</li>
-    </ul>
-  </div>
-
 </section>
 
+<!-- MENU SCRIPT -->
 <script>
 function toggleMenu() {
   document.getElementById("sideMenu").classList.toggle("open");
