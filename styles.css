@@ -48,65 +48,72 @@ body {
   color: #fb923c;
 }
 
-/* ================= HERO (UPGRADED) ================= */
+/* ================= HERO ================= */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 160px 140px;
-  min-height: 100vh;
+  padding: 90px 100px; /* reduced from 100 */
 }
 
 .hero-left {
-  max-width: 650px;
+  max-width: 620px;
 }
 
+/* Hello */
 .hello {
-  font-size: 18px;
   color: #9ca3af;
-  margin-bottom: 6px;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
+/* NAME (reduced slightly) */
 .hero-left h1 {
-  font-size: 72px;
+  font-size: 54px;   /* was bigger → Lloyd-like */
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
+/* subtitle */
 .subtitle {
-  font-size: 18px;
   color: #9ca3af;
+  font-size: 16px;
+  margin-bottom: 14px;
 }
 
+/* ROLE */
 .role {
-  font-size: 40px;
-  font-weight: 600;
   color: #fb923c;
-  margin: 18px 0;
+  font-size: 32px;  /* reduced */
+  font-weight: 600;
+  margin-bottom: 14px;
 }
 
 .gear {
   color: #fb923c;
+  font-size: 22px;
+  margin-left: 6px;
 }
 
+/* STACK */
 .stack {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-top: 16px;
   color: #cbd5f5;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 22px;
 }
 
-/* ================= SOCIAL ICONS ================= */
+/* ================= SOCIALS ================= */
 .socials {
   display: flex;
-  gap: 15px;
-  margin: 26px 0;
+  gap: 14px;
+  margin-bottom: 24px;
 }
 
 .socials a {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 10px;
   border: 1px solid #1e293b;
   display: flex;
@@ -114,7 +121,6 @@ body {
   justify-content: center;
   color: #e5e7eb;
   text-decoration: none;
-  font-size: 16px;
 }
 
 .socials a:hover {
@@ -125,15 +131,14 @@ body {
 /* ================= BUTTONS ================= */
 .buttons {
   display: flex;
-  gap: 18px;
-  margin-top: 10px;
+  gap: 16px;
 }
 
 .btn {
-  padding: 14px 28px;
+  padding: 13px 26px;
   border-radius: 12px;
+  font-size: 15px;
   text-decoration: none;
-  font-size: 16px;
 }
 
 .primary {
@@ -151,24 +156,17 @@ body {
   color: #020617;
 }
 
-/* ================= HERO IMAGE ================= */
-.hero-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -20px; /* lifts image slightly */
-}
-
+/* ================= IMAGE ================= */
 .hero-right img {
-  width: 420px;
-  height: 420px;
+  width: 400px;        /* balanced like Lloyd */
+  height: 400px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  border: 8px solid #fb923c;
+  border: 7px solid #fb923c;
 }
 
-/* ================= ABOUT PAGE ================= */
+/* ================= ABOUT ================= */
 .about-page {
   padding: 120px 80px;
   text-align: center;
@@ -193,7 +191,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* ================= SKILLS PAGE ================= */
+/* ================= SKILLS ================= */
 .skills-page {
   max-width: 1200px;
   margin: 120px auto;
@@ -202,8 +200,7 @@ body {
 
 .skills-page h1 {
   text-align: center;
-  font-size: 48px;
-  color: #e5e7eb;
+  font-size: 46px;
 }
 
 .skills-subtitle {
@@ -212,48 +209,13 @@ body {
   margin-bottom: 60px;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-  gap: 30px;
-}
-
-.skill-card {
-  background: radial-gradient(circle at top, #0b1220, #050914);
-  border: 1px solid rgba(251, 146, 60, 0.2);
-  border-radius: 16px;
-  padding: 28px;
-}
-
-.skill-card h2 {
-  color: #fb923c;
-  margin-bottom: 18px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.skill-tags span {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  color: #e5e7eb;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* ================= CONTACT PAGE ================= */
+/* ================= CONTACT ================= */
 .contact-page {
   padding: 100px 8%;
-  color: #fff;
 }
 
 .page-title {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 46px;
 }
 
 .page-subtitle {
@@ -268,14 +230,14 @@ body {
 }
 
 .contact-image {
-  background: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0")
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f")
     center/cover no-repeat;
   border-radius: 20px;
   padding: 40px;
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255,255,255,0.03);
   border-radius: 20px;
   padding: 40px;
 }
@@ -283,17 +245,16 @@ body {
 .contact-item {
   display: flex;
   gap: 15px;
-  margin: 25px 0;
+  margin: 22px 0;
 }
 
 .contact-item i {
-  color: orange;
+  color: #fb923c;
   font-size: 22px;
 }
 
 .contact-item span {
-  font-weight: bold;
-  display: block;
+  font-weight: 600;
 }
 
 .contact-item a {
@@ -301,41 +262,22 @@ body {
   text-decoration: none;
 }
 
-/* ================= COLLABORATE CARD ================= */
+/* Collaborate */
 .collaborate-card {
   margin-top: 30px;
 }
 
 .orange-title {
-  color: #ff8c1a;
+  color: #fb923c;
   margin-bottom: 12px;
 }
 
 .collab-text {
   color: #bfc6d1;
-  font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.collab-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.collab-list li {
-  position: relative;
-  padding-left: 22px;
-  margin-bottom: 10px;
-  color: #bfc6d1;
-  font-size: 14px;
 }
 
 .collab-list li::before {
   content: "●";
-  position: absolute;
-  left: 0;
   color: #2ecc71;
-  font-size: 12px;
 }
