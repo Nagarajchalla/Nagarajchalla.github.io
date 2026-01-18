@@ -136,12 +136,12 @@ body {
 
 /* IMAGE */
 .hero-right img {
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 15%;
-  border: 6px solid #fb923c;
+  object-position: center top;
+  border: 8px solid #fb923c;
 }
 
 /* ABOUT PAGE */
