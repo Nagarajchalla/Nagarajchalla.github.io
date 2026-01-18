@@ -10,7 +10,7 @@ body {
   color: #e5e7eb;
 }
 
-/* MENU */
+/* ================= MENU ================= */
 .menu-btn {
   position: fixed;
   top: 20px;
@@ -48,30 +48,42 @@ body {
   color: #fb923c;
 }
 
-/* HERO */
+/* ================= HERO (UPGRADED) ================= */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px;
+  padding: 160px 140px;
+  min-height: 100vh;
 }
 
 .hero-left {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .hello {
+  font-size: 18px;
   color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.hero-left h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
 }
 
 .subtitle {
-  margin-top: 10px;
+  font-size: 18px;
   color: #9ca3af;
 }
 
 .role {
+  font-size: 40px;
+  font-weight: 600;
   color: #fb923c;
-  margin: 10px 0;
+  margin: 18px 0;
 }
 
 .gear {
@@ -79,20 +91,22 @@ body {
 }
 
 .stack {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 16px;
   color: #cbd5f5;
-  margin-top: 10px;
 }
 
-/* SOCIAL ICONS */
+/* ================= SOCIAL ICONS ================= */
 .socials {
   display: flex;
   gap: 15px;
-  margin: 20px 0;
+  margin: 26px 0;
 }
 
 .socials a {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
   border: 1px solid #1e293b;
   display: flex;
@@ -100,6 +114,7 @@ body {
   justify-content: center;
   color: #e5e7eb;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .socials a:hover {
@@ -107,16 +122,18 @@ body {
   color: #020617;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
+  margin-top: 10px;
 }
 
 .btn {
-  padding: 12px 22px;
-  border-radius: 10px;
+  padding: 14px 28px;
+  border-radius: 12px;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .primary {
@@ -134,7 +151,14 @@ body {
   color: #020617;
 }
 
-/* IMAGE */
+/* ================= HERO IMAGE ================= */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px; /* lifts image slightly */
+}
+
 .hero-right img {
   width: 420px;
   height: 420px;
@@ -144,7 +168,7 @@ body {
   border: 8px solid #fb923c;
 }
 
-/* ABOUT PAGE */
+/* ================= ABOUT PAGE ================= */
 .about-page {
   padding: 120px 80px;
   text-align: center;
@@ -168,10 +192,8 @@ body {
   margin-top: 30px;
   margin-bottom: 8px;
 }
-/* ===================== */
-/* SKILLS PAGE */
-/* ===================== */
 
+/* ================= SKILLS PAGE ================= */
 .skills-page {
   max-width: 1200px;
   margin: 120px auto;
@@ -223,26 +245,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.learning-card {
-  margin-top: 60px;
-  background: radial-gradient(circle at top, #0b1220, #050914);
-  border: 1px solid rgba(251, 146, 60, 0.2);
-  border-radius: 16px;
-  padding: 40px;
-  text-align: center;
-}
-
-.learning-card h2 {
-  color: #fb923c;
-  margin-bottom: 16px;
-}
-
-.learning-card p {
-  color: #9ca3af;
-  line-height: 1.7;
-}
-
-/* CONTACT PAGE */
+/* ================= CONTACT PAGE ================= */
 .contact-page {
   padding: 100px 8%;
   color: #fff;
@@ -265,13 +268,14 @@ body {
 }
 
 .contact-image {
-  background: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0")
+    center/cover no-repeat;
   border-radius: 20px;
   padding: 40px;
 }
 
 .contact-card {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 20px;
   padding: 40px;
 }
@@ -297,7 +301,7 @@ body {
   text-decoration: none;
 }
 
-/* Collaborate Section */
+/* ================= COLLABORATE CARD ================= */
 .collaborate-card {
   margin-top: 30px;
 }
