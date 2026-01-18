@@ -4,30 +4,23 @@
   <meta charset="UTF-8" />
   <title>Skills | Nagaraj Challa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/styles.css" >
 </head>
-
 <body>
 
 <!-- ☰ MENU BUTTON -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-<!-- SIDE MENU -->
-<nav class="sidebar" id="sidebar">
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="skills.html" class="active">Skills</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <a class="active" href="skills.html">Skills</a>
+  <a href="projects.html">Projects</a>
+  <a href="index.html#contact">Contact</a>
+</div>
 
-<!-- SKILLS PAGE -->
 <section class="skills-page">
-
   <h1>Skills & Technologies</h1>
   <p class="skills-subtitle">
     Technologies and tools I work with to bring ideas to life
@@ -39,9 +32,7 @@
     <div class="skill-card">
       <h2>Cloud Technologies</h2>
       <div class="skill-tags">
-        <span>AWS</span>
-        <span>Azure</span>
-        <span>Google Cloud</span>
+        <span>AWS</span><span>Azure</span><span>Google Cloud</span>
       </div>
     </div>
 
@@ -49,9 +40,7 @@
     <div class="skill-card">
       <h2>CI/CD Tools</h2>
       <div class="skill-tags">
-        <span>Jenkins</span>
-        <span>GitHub Actions</span>
-        <span>GitLab</span>
+        <span>Jenkins</span><span>GitHub Actions</span><span>GitLab</span>
       </div>
     </div>
 
@@ -59,22 +48,12 @@
     <div class="skill-card">
       <h2>Tools & Platforms</h2>
       <div class="skill-tags">
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Docker</span>
-        <span>Kubernetes</span>
-        <span>Terraform</span>
-        <span>Pulumi</span>
-        <span>ArgoCD</span>
-        <span>Bitbucket</span>
-        <span>Apache Kafka</span>
-        <span>RabbitMQ</span>
-        <span>Nginx</span>
-        <span>Bash Scripting</span>
-        <span>Python</span>
-        <span>Linux</span>
-        <span>Trivy</span>
-        <span>OWASP</span>
+        <span>Git</span><span>GitHub</span><span>Bitbucket</span>
+        <span>Docker</span><span>Kubernetes</span><span>Terraform</span>
+        <span>Pulumi</span><span>ArgoCD</span>
+        <span>Apache Kafka</span><span>RabbitMQ</span>
+        <span>Nginx</span><span>Bash</span><span>Python</span><span>Linux</span>
+        <span>Trivy</span><span>OWASP</span>
       </div>
     </div>
 
@@ -82,10 +61,7 @@
     <div class="skill-card">
       <h2>Configuration Management</h2>
       <div class="skill-tags">
-        <span>Ansible</span>
-        <span>Helm</span>
-        <span>Kustomize</span>
-        <span>Terraform</span>
+        <span>Ansible</span><span>Helm</span><span>Kustomize</span><span>Terraform</span>
       </div>
     </div>
 
@@ -93,12 +69,8 @@
     <div class="skill-card">
       <h2>Monitoring & Logging</h2>
       <div class="skill-tags">
-        <span>Prometheus</span>
-        <span>Grafana</span>
-        <span>Loki</span>
-        <span>FluentBit</span>
-        <span>Promtail</span>
-        <span>NewRelic</span>
+        <span>Prometheus</span><span>Grafana</span><span>Loki</span>
+        <span>FluentBit</span><span>Promtail</span><span>NewRelic</span>
       </div>
     </div>
 
@@ -126,7 +98,6 @@
 
 </section>
 
-<!-- MENU SCRIPT -->
 <script>
 function toggleMenu() {
   document.getElementById("sidebar").classList.toggle("open");
