@@ -10,7 +10,7 @@ body {
   color: #e5e7eb;
 }
 
-/* ================= MENU ================= */
+/* MENU */
 .menu-btn {
   position: fixed;
   top: 20px;
@@ -48,72 +48,51 @@ body {
   color: #fb923c;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 90px 100px; /* reduced from 100 */
+  padding: 100px;
 }
 
 .hero-left {
-  max-width: 620px;
+  max-width: 600px;
 }
 
-/* Hello */
 .hello {
   color: #9ca3af;
-  font-size: 16px;
-  margin-bottom: 8px;
 }
 
-/* NAME (reduced slightly) */
-.hero-left h1 {
-  font-size: 54px;   /* was bigger → Lloyd-like */
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 10px;
-}
-
-/* subtitle */
 .subtitle {
+  margin-top: 10px;
   color: #9ca3af;
-  font-size: 16px;
-  margin-bottom: 14px;
 }
 
-/* ROLE */
 .role {
   color: #fb923c;
-  font-size: 32px;  /* reduced */
-  font-weight: 600;
-  margin-bottom: 14px;
+  margin: 10px 0;
 }
 
 .gear {
   color: #fb923c;
-  font-size: 22px;
-  margin-left: 6px;
 }
 
-/* STACK */
 .stack {
   color: #cbd5f5;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 22px;
+  margin-top: 10px;
 }
 
-/* ================= SOCIALS ================= */
+/* SOCIAL ICONS */
 .socials {
   display: flex;
-  gap: 14px;
-  margin-bottom: 24px;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .socials a {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   border: 1px solid #1e293b;
   display: flex;
@@ -128,16 +107,15 @@ body {
   color: #020617;
 }
 
-/* ================= BUTTONS ================= */
+/* BUTTONS */
 .buttons {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 }
 
 .btn {
-  padding: 13px 26px;
-  border-radius: 12px;
-  font-size: 15px;
+  padding: 12px 22px;
+  border-radius: 10px;
   text-decoration: none;
 }
 
@@ -156,17 +134,17 @@ body {
   color: #020617;
 }
 
-/* ================= IMAGE ================= */
+/* IMAGE */
 .hero-right img {
-  width: 400px;        /* balanced like Lloyd */
-  height: 400px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
-  border: 7px solid #fb923c;
+  object-position: center 15%;
+  border: 6px solid #fb923c;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT PAGE */
 .about-page {
   padding: 120px 80px;
   text-align: center;
@@ -190,8 +168,10 @@ body {
   margin-top: 30px;
   margin-bottom: 8px;
 }
+/* ===================== */
+/* SKILLS PAGE */
+/* ===================== */
 
-/* ================= SKILLS ================= */
 .skills-page {
   max-width: 1200px;
   margin: 120px auto;
@@ -200,7 +180,8 @@ body {
 
 .skills-page h1 {
   text-align: center;
-  font-size: 46px;
+  font-size: 48px;
+  color: #e5e7eb;
 }
 
 .skills-subtitle {
@@ -209,13 +190,67 @@ body {
   margin-bottom: 60px;
 }
 
-/* ================= CONTACT ================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: radial-gradient(circle at top, #0b1220, #050914);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.skill-card h2 {
+  color: #fb923c;
+  margin-bottom: 18px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tags span {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.learning-card {
+  margin-top: 60px;
+  background: radial-gradient(circle at top, #0b1220, #050914);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+.learning-card h2 {
+  color: #fb923c;
+  margin-bottom: 16px;
+}
+
+.learning-card p {
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+/* CONTACT PAGE */
 .contact-page {
   padding: 100px 8%;
+  color: #fff;
 }
 
 .page-title {
-  font-size: 46px;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
 .page-subtitle {
@@ -230,8 +265,7 @@ body {
 }
 
 .contact-image {
-  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f")
-    center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0") center/cover no-repeat;
   border-radius: 20px;
   padding: 40px;
 }
@@ -245,16 +279,17 @@ body {
 .contact-item {
   display: flex;
   gap: 15px;
-  margin: 22px 0;
+  margin: 25px 0;
 }
 
 .contact-item i {
-  color: #fb923c;
+  color: orange;
   font-size: 22px;
 }
 
 .contact-item span {
-  font-weight: 600;
+  font-weight: bold;
+  display: block;
 }
 
 .contact-item a {
@@ -262,22 +297,41 @@ body {
   text-decoration: none;
 }
 
-/* Collaborate */
+/* Collaborate Section */
 .collaborate-card {
   margin-top: 30px;
 }
 
 .orange-title {
-  color: #fb923c;
+  color: #ff8c1a;
   margin-bottom: 12px;
 }
 
 .collab-text {
   color: #bfc6d1;
+  font-size: 15px;
   line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.collab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collab-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: #bfc6d1;
+  font-size: 14px;
 }
 
 .collab-list li::before {
   content: "●";
+  position: absolute;
+  left: 0;
   color: #2ecc71;
+  font-size: 12px;
 }
