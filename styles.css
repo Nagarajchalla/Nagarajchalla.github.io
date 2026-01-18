@@ -140,7 +140,7 @@ body {
   height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   border: 6px solid #fb923c;
 }
 
