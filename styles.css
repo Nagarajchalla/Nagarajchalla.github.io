@@ -139,7 +139,7 @@ body {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   border: 6px solid #fb923c;
 }
 
